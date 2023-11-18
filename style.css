@@ -1,0 +1,8 @@
+body::before{content:"Bang\01F986";font-family: 'Alkatra'; color:white;font-size:4vw;position:fixed;bottom:25px;left:25px;}
+
+@font-face{
+	font-family: 'Alkatra';
+	src: url('Alkatra-Bold.ttf');
+	src: url('Alkatra-Bold.ttf') format('ttf');
+	src: url('Alkatra-Bold.ttf') format('truetype');
+}

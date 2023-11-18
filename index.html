@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="animated.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.min.js"></script>
+	<title>from: bg&#x1F986;</title>
+	<script>
+		alert('Pinjem waktunya bentar ya, Oke?');
+	</script>
+</head>
+<body style="background-color: black;">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#myModal').modal('show');
+		});
+	</script>
+
+	<script language="JavaScript">
+		var tanggallengkap = new String();
+		var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+		namahari = namahari.split(" ");
+		var namabulan = ("Jan Feb Mar Apr Mei Jun Jul Agu Sep Okt Nov Des");
+		namabulan = namabulan.split(" ");
+		var tgl = new Date();
+		var hari = tgl.getDay();
+		var tanggal = tgl.getDate();
+		var bulan = tgl.getMonth();
+		var tahun = tgl.getFullYear();
+		tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+
+	</script>
+
+	<!-- MODAL BOOTSRAP + ANIMATE.CSS -->
+	<div class="modal animate__animated animate__bounce" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" width="100%" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content" style="background-color: rgb(0, 95, 97);">
+				<form name="myform" action="config.php" onsubmit="return validateForm()" method="POST" required>
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<font style="margin-left: auto; color: white;"><script language='JavaScript'>document.write(tanggallengkap);</script></font>
+					</div>
+					<!-- Modal body -->
+					<div class="modal-body">
+						<div class="form-group">
+							<ol style="color: white;">
+								<!-- Question1 -->
+								<li class="animate__animated animate__zoomIn animate__delay-1s"> Nama Kamu &#x2764;&#xFE0F;
+									<input type="text" name="nama_user" id="nama_user" class="form-control" onchange="myFunction()" style="width: 90%; background: rgba(51, 51, 51, 0.5);color: white;">
+								</li>
+								<br>
+								<!-- Question2 -->
+								<li class="animate__animated animate__zoomIn animate__delay-2s"> Menurutmu Cinta itu apa? &nbsp;jawab serius ya &#x1F642;
+									<textarea type="text" name="Quest2" id="Quest2" class="form-control" style="width: 90%; background: rgba(51, 51, 51, 0.5);color: white;"></textarea>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-danger" onclick="mulai()">Next</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- END BOOTSRAP + ANIMATE.CSS -->
+
+	<!-- MODAL 2 BOOTSRAP + ANIMATE.CSS -->
+	<div class="modal animate__animated animate__bounce" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" width="100%" data-keyboard="false" data-backdrop="static" style="display:none;">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content" style="background-color: transparent;">
+				<!-- Modal Body -->
+				<div class="modal-body">
+					<center>
+						<p id="text" style="color: white;"></p>
+						<p id="text2" style="color: white;"></p>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END 2 BOOTSRAP + ANIMATE.CSS -->
+
+	<script src="style.js"></script>
+	<script src="sweetalert2.all.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="bootstrap.bundle.js"></script>
+</body>
+</html>
